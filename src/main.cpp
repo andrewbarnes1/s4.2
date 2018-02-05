@@ -17,8 +17,10 @@ int main(void)
     while (true) {
         acc.getAxis(acc_data);
         mag.getAxis(mag_data);
+        // ACC is measured in G force
         pc.printf("ACC: X=%+1.3f Y=%+1.3f Z=%+1.3f \t",
                   acc_data.x, acc_data.y, acc_data.z);
+        // Not sure what MAG is measured in.
         pc.printf("MAG: X=%+4.1f Y=%+4.1f Z=%+4.1f\n",
                   mag_data.x, mag_data.y, mag_data.z);
         wait(0.5);
